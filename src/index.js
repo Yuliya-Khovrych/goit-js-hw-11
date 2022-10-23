@@ -10,6 +10,8 @@ console.log(input);
 const gallery = document.querySelector('.gallery');
 console.log(gallery);
 
+let query = '';
+
 searchForm.addEventListener('submit', onSearchForm);
 
 function onSearchForm(evt) {
@@ -17,6 +19,7 @@ function onSearchForm(evt) {
   query = evt.currentTarget.searchQuery.value.trim();
   console.log(query);
 
+  gallery.innerHTML = '';
   if (query === '') {
     Notiflix.Notify.failure(
       'The search string cannot be empty. Please specify your search query.'
