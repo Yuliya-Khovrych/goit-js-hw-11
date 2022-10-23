@@ -14,11 +14,19 @@ searchForm.addEventListener('submit', onSearchForm);
 
 function onSearchForm(evt) {
   evt.preventDefault();
-  query = e.currentTarget.searchQuery.value.trim();
+  query = evt.currentTarget.searchQuery.value.trim();
   console.log(query);
+
+  if (query === '') {
+    Notiflix.Notify.failure(
+      'The search string cannot be empty. Please specify your search query.'
+    );
+    return;
+  }
 
   fetchImages(query)
     .then(({ data }) => {
+      console.log(data);
       if (data.totalHits === 0) {
         Notiflix.Notify.info(
           'Sorry, there are no images matching your search query. Please try again.'
