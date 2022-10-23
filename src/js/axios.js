@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const BASE_URL = 'https://pixabay.com/api/';
-const KEY = '30758964 - b2abbca2686476de38f5cecb6';
+const KEY = '30758964-b2abbca2686476de38f5cecb6';
 const params = new URLSearchParams({
   key: KEY,
   q: 'query',
