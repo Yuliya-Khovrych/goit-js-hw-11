@@ -11,8 +11,8 @@ export function markupGallery(images) {
         downloads,
       }) => {
         return `
+        <a href="${webformatURL}">
     <div class="photo-card">
-    <a href="${webformatURL}">
   <img src="${largeImageURL}" alt="${tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
@@ -28,7 +28,8 @@ export function markupGallery(images) {
       <b>Downloads: ${downloads}</b>
     </p>
   </div>
-</div>`;
+</div>
+</a>`;
       }
     )
     .join('');
