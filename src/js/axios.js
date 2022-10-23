@@ -9,9 +9,10 @@ const params = new URLSearchParams({
   orientation: 'horizontal',
   safesearch: 'true',
 });
+console.log(params);
 
 export async function fetchImages() {
-  const response = await axios.get('${BASE_URL}', params);
+  const response = await axios.get('${BASE_URL}${params}');
   console.log(response);
   return response;
 }
