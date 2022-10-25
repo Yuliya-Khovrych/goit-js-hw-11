@@ -33,6 +33,7 @@ export function markupGallery(images) {
       }
     )
     .join('');
+
   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
@@ -49,7 +50,6 @@ export function markupGallery(images) {
 //         comments,
 //         downloads,
 //       } = image;
-//       console.log(image);
 //       return `
 //         <a class="gallery__link" href="${largeImageURL}">
 //           <div class="gallery-item" id="${id}">
@@ -65,6 +65,8 @@ export function markupGallery(images) {
 //       `;
 //     })
 //     .join('');
+
+//   console.log(markup);
 
 //   gallery.insertAdjacentHTML('beforeend', markup);
 // }
